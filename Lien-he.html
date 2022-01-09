@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lien-he</title>
+    <script src="https://kit.fontawesome.com/3a6163f80a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            font-size: 100%;
+            line-height: 1.6;
+            color: #353535;
+        }
+        .nav-bar{
+            max-width: 1120px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+        }
+
+        /* logo */
+        .nav-bar .logo{
+            float: left;
+            padding: 35px 0 0 10px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-style: none;
+            max-height: 110px;
+            opacity: 1;
+        }
+        .logo a{
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        .logo{
+            line-height: 1;
+        }
+
+        /* menu */
+        .header-menu{
+            background-color: white;
+        }
+        .nav-bar .menu-cap-1{
+            float: right;
+            position: relative;
+            padding: 20px 0;
+        }
+        .nav-bar .menu-cap-1 a{
+            color: #7D7D7D;
+            font-size: 14px;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1{
+            display: inline-block;
+            font-size: 13px;
+            line-height: 17px;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1 a{
+            line-height: 16px;
+            border-bottom: 3px solid #ffffff;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1:hover .title-item-menu-cap-1{
+            border-bottom: 3px solid #FFB300;
+            transition-duration: 0.2s;
+            color: #000000;
+        }
+        .nav-bar .title-item-menu-cap-2:hover{
+            background-color: rgb(238, 235, 235);
+            transition-duration: 0.4s;
+        }
+        .nav-bar .item-menu-cap-3:hover .title-item-menu-cap-3{
+            background-color: rgb(238, 235, 235);
+            color: #000000;
+            transition-duration: 0.4s;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1 .title-item-menu-cap-1{
+            display: inline-block;
+            padding: 10px 10px;
+            margin-top: 10px;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1:hover .menu-cap-2{
+            display: flex;
+            visibility: visible;
+        }
+        .nav-bar .menu-cap-2{
+            position: absolute;
+            visibility: hidden;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 5px;
+            padding: 25px 20px;
+            height: auto;
+            max-width: 100%;
+            padding-left: -20px;
+        }
+        .nav-bar .menu-cap-2 a{
+            color: black;
+        }
+        .nav-bar .menu-cap-2 .item-menu-cap-2{
+            display: flex;
+            flex-direction: column;
+            min-width: 160px;
+            text-align: left;
+        }
+        .nav-bar .menu-cap-2 .title-item-menu-cap-2{
+            font-size: 13px;
+            padding: 10px 10px;
+        }
+        .nav-bar .menu-cap-2 .title-item-menu-cap-3{
+            font-size: 16px;
+            color: #7D7D7D;
+            padding: 10px 10px;
+        }
+        .nav-bar .item-menu-cap-3{
+            padding: 10px 0px;
+        }
+        .hot:after{
+            background: #ffb300;
+            content: "Hot";
+            display: inline-block;
+            font-size: 9px;
+            line-height: 9px;
+            text-transform: uppercase;
+            margin-left: 4px;
+            font-weight: bold;
+            border-radius: 2px;
+            color: #fff;
+            padding: 2px 3px 3px 3px;
+            position: relative;
+            top: -4px;
+        }
+
+        .header-menu .nav-bar #title-item-menu-cap-1-2{
+            border-right: 1px solid #bdb7b7;
+            max-height: 33px;
+            padding-right: 20px;
+        }
+
+        .nav-bar #icon-search{
+            background: #ffb300;
+            margin-left: 20px;
+            padding: 8px;
+            font-size: 18px;
+            border-radius: 5px;
+            color: white;
+        }
+        .nav-bar #icon-search:hover{
+            background-color: #c9900c;
+            transition-duration: 0.5s;
+        }
+
+        /* anh nen */
+        .image-background{
+            background: url(https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/72/2019/07/19150736/DSC_2711-1-1024x400.jpg) no-repeat center center/cover;
+            height: 180px;
+            overflow: auto;
+            width: 100%;
+        }
+        .image-background .mask{
+            background-color: rgb(0, 0, 0, 0.5);
+            height: 100%;
+        }
+        .image-background .title{
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+            font-size: 20px;
+        }
+
+        /* thong tin lien he va dang ki */
+        .lien-he-content{
+            background-color: whitesmoke;
+            text-align: center;
+            margin: auto;
+            padding-top: 50px;
+            height: 500px;
+        }
+        .lien-he-content .thong-tin-lien-he-1{
+            float: left;
+            text-align: left;
+            padding-left: 15%;
+        }
+        .lien-he-content .lien-he-title{
+            color: #ffb300;
+            font-size: 20px;
+            padding-bottom: 15px;
+        }
+        .lien-he-content .dia-chi-lien-he{
+            padding-bottom: 15px;
+            font-weight: 350;
+            font-size: 16px;
+        }
+        .lien-he-content .dien-thoai-lien-he{
+            font-size: 16px;
+            padding-bottom: 15px;
+        }
+        .lien-he-content .dien-thoai-lien-he a{
+            color: black;
+            font-weight: 350;
+        }
+        .lien-he-content .dien-thoai-lien-he:hover a{
+            color: #ffb300;
+            transition-duration: 0.5s;
+        }
+        .lien-he-content .email{
+            font-size: 16px;
+            padding-bottom: 15px;
+        }
+        .lien-he-content .email a{
+            color: black;
+            font-weight: 350;
+        }
+        .lien-he-content .email:hover a{
+            color: #ffb300;
+            transition-duration: 0.5s;
+        }
+        .lien-he-content #khoang-cach{
+            padding-right: 10px;
+        }
+        .lien-he-content #icon-item1{
+            padding: 0 5px;
+            font-size: 20px;
+        }
+        .lien-he-content .fa-facebook-f:hover{
+            color: rgb(11, 151, 206);
+            transition-duration: 0.3s;
+        }
+        .lien-he-content .fa-instagram:hover{
+            color: tomato;
+            transition-duration: 0.3s;
+        }
+        .lien-he-content .fa-google-plus-g:hover{
+            color: orangered;
+            transition-duration: 0.3s;
+        }
+        .lien-he-content .fa-youtube:hover{
+            color: red;
+            transition-duration: 0.3s;
+        }
+        .lien-he-content .icon-mang-xa-hoi1{
+            color: black;
+        }
+        
+        /* thong tin lien he phan dang ki */
+        .lien-he-content .thong-tin-lien-he-2{
+            float: right;
+            padding-right: 15%;
+        }
+        .lien-he-content input{
+            padding: 10px 10px;
+            width: 250px;
+            border: 1px solid rgb(139, 139, 139);
+            border-radius: 3px;
+        }
+        .lien-he-content textarea{
+            padding: 10px 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid rgb(139, 139, 139);
+            border-radius: 3px;
+        }
+        .lien-he-content .hang-1{
+            padding-bottom: 15px;
+            padding-top: 10px;
+        }
+        .lien-he-content .ho-ten{
+            margin-right: 10px;
+        }
+        .lien-he-content .so-dien-thoai{
+            margin-right: 10px;
+        }
+        .lien-he-content .hang-3{
+            padding-top: 15px;
+        }
+        .lien-he-content input:focus{
+            border: 1.1px solid #ffb300;
+            outline: none;
+        }
+        .lien-he-content textarea:focus{
+            border: 1.1px solid #ffb300;
+            outline: none;
+        }
+        .lien-he-content .btn1{
+            margin-top: 10px;
+            padding: 9px;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .lien-he-content .btn1-primary1{
+            background-color: #f7b211;
+            color: white;
+            border: 1px solid #f7b211;
+            border-radius: 3px;
+        }
+        .lien-he-content .btn1-primary1:hover{
+            background-color: #b68411;
+            transition-duration: 0.3s;
+        }
+
+        /* thong tin lien he phan duoi*/
+        .thong-tin-web{
+            background: url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/02/bg-section-videos.jpg) no-repeat center center/cover;
+            color: #A5A5A5;
+        }
+        .thong-tin-web a{
+            color: #A5A5A5;
+        }
+        .thong-tin-web .container{
+            /* padding-top: 50px; */
+            text-align: center;
+        }
+        .thong-tin-web .thong-tin-title{
+            display: inline-block;
+            width: 17%;
+            text-align: left;
+            padding-top: 50px;
+        }
+        .thong-tin-web .tour-pho-bien-item{
+            display: inline-block;
+        }
+        /* lien he */
+        .thong-tin-web .dia-chi{
+            padding-top: 20px;
+        }
+        .thong-tin-web .email{
+            padding-top: 10px;
+        }
+        .thong-tin-web .icon-lien-he{
+            padding-top: 30px;
+        }
+        .thong-tin-web #icon-item{
+            padding: 0 5px;
+        }
+        .thong-tin-web .danh-muc-tin-tuc-item{
+            padding-top: 20px;
+            font-size: 13px;
+            font-weight: 200;
+        }
+        .thong-tin-web .dien-thoai-btn:hover{
+            color: white;
+        }
+        .thong-tin-web .email-btn:hover{
+            color: white;
+        }
+        .thong-tin-web #icon-item:hover{
+            color: white;
+            transition-duration: 0.5s;
+        }
+        .thong-tin-web #khoang-cach{
+            padding-right: 10px;
+        }
+        /* tour pho bien */
+        .thong-tin-web .mot-vai-tour-pho-bien{
+            padding-top: 30px;
+        }
+        .thong-tin-web .tour-pho-bien-item img{
+            float: left;
+        }
+        /* footer */
+        .thong-tin-web .mo-ta{
+            margin: auto;
+            text-align: center;
+            border-top: solid;
+            max-width: 1150px;
+            margin-top: 50px;
+            font-weight: 350;
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+        .thong-tin-web .mo-ta-btn:hover{
+            color: white;
+        }
+
+        /* form dang ki */
+        .form-dang-ki{
+            background: url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/02/hotel-result.jpg) no-repeat center center/cover;
+            height: 350px;
+            text-align: center;
+            color: white;
+        }
+        .form-dang-ki .mask{
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .form-dang-ki .form-dang-ki-desc{
+            padding-top: 60px;
+            font-weight: 400;
+        }
+        .form-dang-ki .form-dang-ki-title{
+            padding-top: 20px;
+            font-size: 18px;
+        }
+        .form-dang-ki .email{
+            margin-top: 50px;
+            padding: 10px 10px;
+            padding-right: 200px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .form-dang-ki .btn-dang-ki{
+            padding: 10px 10px 12px 10px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: #FFB300;
+            border: 0;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: -5px;
+        }
+        .form-dang-ki .btn-dang-ki:hover{
+            background-color: #966d0e;
+            transition-duration: 1s;
+        }
+        .form-dang-ki .btn-dang-ki a{
+            color: white;
+        }
+        .form-dang-ki .btn-dang-ki:focus{
+            border: 0;
+            color: #FFB300;
+        }
+        .form-dang-ki .email:focus{
+            border: 1px solid white;
+            box-shadow:  1px 1px 3px 0 white;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-menu">
+        <nav id="nav-bar" class="nav-bar">
+            <div class="logo">
+                <a href="index.html"><img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/mona-logo2.png" width="120" height="90" alt=""></a>
+            </div>
+    
+            <div class="menu-cap-1">
+                <ul>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="Gioi-thieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="du-lich-trong nuoc.html">TOUR NỘI ĐỊA <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-cap-2">
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN BẮC</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Hà Nội</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Sa Pa</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Hạ Long</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN TRUNG</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Đà Nẵng</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Phú Yên</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN NAM</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Côn Đảo</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Phú Quốc</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1 hot" href="du-lich-nuoc-ngoai.html">TOUR NƯỚC NGOÀI <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-cap-2">
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU Á</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Hàn Quốc</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Nhật Bản</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU ÂU</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Anh</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Nga</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU MỸ</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Canada</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Mỹ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="tin-tuc.html">TIN TỨC</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a id="title-item-menu-cap-1-2" class="title-item-menu-cap-1" href="Lien-he.html">LIÊN HỆ</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a href=""><i id="icon-search" class="fas fa-search"></i></a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="image-background">
+            <div class="mask">
+                <div class="title">
+                    <h1>LIÊN HỆ</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="lien-he-content">
+            <div class="thong-tin-lien-he-1">
+                <div class="lien-he-title">
+                    <h3>THÔNG TIN LIÊN HỆ</h3>
+                </div>
+                <div class="dia-chi-lien-he">
+                    <div class="icon">
+                        <i id="khoang-cach" class="fas fa-map-marker-alt"></i> 319 - C16 Lý Thường Kiệt, Q.11, Tp.HCM
+                    </div>
+                </div>
+                <div class="dien-thoai-lien-he">
+                    <i id="khoang-cach" class="fas fa-phone-alt"></i> <a href="#" class="dien-thoai-btn">0126 922 0162</a>
+                </div>
+                <div class="email">
+                    <i id="khoang-cach" class="fas fa-envelope"></i> <a href="#" class="email-btn">demonhunter@gmail.com</a>
+                </div>
+                <div class="icon-lien-he">
+                    <a href="#" class="icon-mang-xa-hoi1">
+                        <i id="icon-item1" class="fab fa-facebook-f fa-1x"></i>
+                        <i id="icon-item1" class="fab fa-instagram fa-1x"></i>
+                        <i id="icon-item1" class="fab fa-google-plus-g fa-1x"></i>
+                        <i id="icon-item1" class="fab fa-youtube fa-1x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="thong-tin-lien-he-2">
+                <div class="hang-1">
+                    <input class="ho-ten" type="text" placeholder="Họ và tên">
+                    <input class="email2" type="email" placeholder="Email">
+                </div>
+                <div class="hang-2">
+                    <input class="so-dien-thoai" type="number" placeholder="Số điện thoại">
+                    <input class="dia-chi" type="text" placeholder="Địa chỉ">
+                </div>
+                <div class="hang-3">
+                    <textarea name="loi-nhan" id="loi-nhan" rows="8" placeholder="Lời nhắn"></textarea>
+                </div>
+                <div class="hang-4">
+                    <button class="btn1 btn1-primary1">GỬI</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- thong tin lien he -->
+        <section id="lienHe" class="thong-tin-web">
+            <div class="container">
+                <div class="thong-tin-title">
+                    <div class="icon-web">
+                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/logo-while.png" alt="" width="180" height="180">
+                    </div>
+                    
+                    <div class="dia-chi">
+                        <div class="icon">
+                            <i id="khoang-cach" class="fas fa-map-marker fa-1x"></i> 319 - C16 Lý Thường Kiệt, Q.11,
+                            <br>
+                            HCM
+                        </div>
+                    </div>
+
+                    <div class="dien-thoai-lien-he">
+                        <i id="khoang-cach" class="fas fa-phone-alt"></i> <a href="Lien-he.html" class="dien-thoai-btn">0126 922 0162</a>
+                    </div>
+
+                    <div class="email">
+                        <i id="khoang-cach" class="fas fa-envelope"></i> <a href="Lien-he.html" class="email-btn">demonhunter@gmail.com</a>
+                    </div>
+
+                    <div class="icon-lien-he">
+                        <a href="Lien-he.html" class="icon-mang-xa-hoi">
+                            <i id="icon-item" class="fab fa-facebook-f fa-1x"></i>
+                            <i id="icon-item" class="fab fa-instagram fa-1x"></i>
+                            <i id="icon-item" class="fab fa-google-plus-g fa-1x"></i>
+                            <i id="icon-item" class="fab fa-youtube fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="thong-tin-title">
+                    <ul class="danh-muc-tin-tuc">
+                        <h3>Tin Tức</h3>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Bản tin Du Lịch Việt</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Khám phá du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Kinh nghiệm du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Sự kiện du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Tuyển dụng Du Lịch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="thong-tin-title">
+                    <ul class="danh-muc-tin-tuc">
+                        <h3>Menu</h3>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Giới thiệu</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Du lịch trong nước</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Du lịch nước ngoài</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Tin tức</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="thong-tin-title-1" class="thong-tin-title">
+                    <h3 class="title">Tour Phổ Biến</h3>
+                    <div class="mot-vai-tour-pho-bien">
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-nhat">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/coco2-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-hai">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/1057_deo_hai_van-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-ba">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/travlec-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-tu">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/bana5-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-nam">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/lang-hoa-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-sau">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/hue-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mo-ta">
+                <p>
+                    © All rights reserved.
+                    <br>
+                    Thiết kế website
+                    <img src="http://mona-media.com/logo.png" alt="" width="20" height="20">
+                    <a class="mo-ta-btn" href="index.html">
+                        Mona Media
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section class="form-dang-ki">
+            <div class="mask">
+                <div class="form-dang-ki-desc">
+                <p>Luôn là những người có thông tin sớm nhất</p>
+            </div>
+            <div class="form-dang-ki-title">
+                <h1>ĐĂNG KÍ ĐỂ NHẬN ƯU ĐÃI</h1>
+            </div>
+            <div class="form-dang-ki-icon">
+                <img width="70" height="20" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach2.png" alt="">
+            </div>
+            <input type="email" class="email" placeholder="Email của bạn">
+            <button class="btn-dang-ki"><a href="">Gửi</a></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

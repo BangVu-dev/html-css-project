@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://kit.fontawesome.com/3a6163f80a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="large-desktop.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1200px)" href="small-desktop.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 992px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobie.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+<body>
+    <header class="header-menu-1">
+        <nav id="nav-bar" class="nav-bar">
+            <div class="logo">
+                <a href=""><img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/logo-while-1.png" width="120" height="90" alt=""></a>
+            </div>
+    
+            <div class="menu-cap-1">
+                <ul>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="Gioi-thieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="du-lich-trong nuoc.html">TOUR NỘI ĐỊA <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-cap-2">
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN BẮC</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Hà Nội</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Sa Pa</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Hạ Long</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN TRUNG</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Đà Nẵng</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Phú Yên</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN NAM</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Côn Đảo</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Phú Quốc</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1 hot" href="du-lich-nuoc-ngoai.html">TOUR NƯỚC NGOÀI <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-cap-2">
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU Á</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Hàn Quốc</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Nhật Bản</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU ÂU</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Anh</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Nga</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU MỸ</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Canada</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Mỹ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="tin-tuc.html">TIN TỨC</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a id="title-item-menu-cap-1-2" class="title-item-menu-cap-1" href="Lien-he.html">LIÊN HỆ</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a href=""><i id="icon-search" class="fas fa-search"></i></a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="showcase">
+            <div class="mask">
+                <div class="container">
+                    <p class="title-desc">
+                        MONA TRAVEL &#8211; ĐI VÀ TRẢI NGHIỆM MỌI THỨ
+                    </p>
+                    <h2 class="sologan-desc">
+                        ĐỒNG HÀNH CÙNG BẠN <br /> MỌI NẺO ĐƯỜNG
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <a href="#nav-bar"><i class="fas fa-chevron-up"></i></a>
+
+        <!-- gioi thieu tour nuoc ngoai -->
+        <section id="gioiThieu" class="thuvien">
+            <div class="thuvien-desc">
+                <p>Những điểm đến trên cả tuyệt vời</p>
+            </div>
+
+            <div class="thuvien-title">
+                <h1>THIÊN ĐƯỜNG HỘI TỤ</h1>
+            </div>
+
+            <div class="thuvien-icon">
+                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach.png" alt="" width="60" height="10">
+            </div>
+        
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="thuvien-image">
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/25656857141_edcdf5e6e3_o.jpg" alt="">
+                                        <p class="thuvien-image-item-desc">
+                                            ITALY
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/washington_dc.jpg" alt="">
+                                        <p class="thuvien-image-item-desc">
+                                            USA
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/thumb-cuba.jpg" alt="" >
+                                        <p class="thuvien-image-item-desc">
+                                            CUBA
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/photo-1474181487882-5abf3f0ba6c2.jpg" alt="" >
+                                        <p class="thuvien-image-item-desc">
+                                            PHILIPPINES
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/25816508131_00e16429b8_o.jpg" alt="" >
+                                        <p class="thuvien-image-item-desc">
+                                            CANADA
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="thuvien-image">
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/25656857141_edcdf5e6e3_o.jpg" alt="">
+                                        <p class="thuvien-image-item-desc">
+                                            ITALY
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/washington_dc.jpg" alt="">
+                                        <p class="thuvien-image-item-desc">
+                                            USA
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/thumb-cuba.jpg" alt="" >
+                                        <p class="thuvien-image-item-desc">
+                                            CUBA
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/photo-1474181487882-5abf3f0ba6c2.jpg" alt="" >
+                                        <p class="thuvien-image-item-desc">
+                                            PHILIPPINES
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="thuvien-image-item">
+                                    <a href="du-lich-nuoc-ngoai.html" class="thuvien-image-item-title">
+                                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/25816508131_00e16429b8_o.jpg" alt="" >
+                                        <p class="thuvien-image-item-desc">
+                                            CANADA
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- tour nuoc ngoai -->
+        <section id="tourNuocNgoai" class="tour-san-pham">
+            <div class="mask">
+                <div class="container">
+                    <div class="tour-san-pham-item-desc">
+                        Chọn ngay cho bạn tour phù hợp
+                    </div>
+
+                    <h1 class="tour-san-pham-title">
+                        TOUR NƯỚC NGOÀI
+                    </h1>
+
+                    <div class="tour-san-pham-icon">
+                        <img width="60" height="10" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach2.png" alt="" width="100%" height="70%">
+                    </div>
+
+                    <div class="tour-san-pham-item">
+                        <div class="tour-san-pham-image">
+                            <a href="du-lich-nuoc-ngoai.html" class="tour-san-pham-background">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/Du-lich-que-lam-trung-quoc-www.kynghidongduong.vn-6.jpg" alt="">
+                                <div class="tour-san-pham-background-mask">
+                                    <p class="tour-san-pham-name">
+                                        DU LỊCH CANADA
+                                    </p>
+                                    <a href="" class="tour-san-pham-desc">
+                                        DU LỊCH CANADA GIÁ TỐT KHỞI HÀNH TỪ HN
+                                    </a>
+                                    <p class="gia-tour">
+                                        97,900,000 <u>đ</u>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="tour-san-pham-image">
+                            <a href="du-lich-nuoc-ngoai.html" class="tour-san-pham-background">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/2.jpg" alt="">
+                                <div class="tour-san-pham-background-mask">
+                                    <p class="tour-san-pham-name">
+                                        DU LỊCH CHÂU ÂU
+                                    </p>
+                                    <a href="" class="tour-san-pham-desc">
+                                        DU LỊCH NGA 8 NGÀY KHỞI HÀNH TỪ TP.HCM
+                                    </a>
+                                    <p class="gia-tour">
+                                        49,900,000 <u>đ</u>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tour-san-pham-image">
+                            <a href="du-lich-nuoc-ngoai.html" class="tour-san-pham-background">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/1.jpg" alt="">
+                                <div class="tour-san-pham-background-mask">
+                                    <p class="tour-san-pham-name">
+                                        DU LỊCH ANH
+                                    </p>
+                                    <a href="" class="tour-san-pham-desc">
+                                        DU LỊCH ANH - SCOTLAND 8 NGÀY 7 ĐÊM GIÁ
+                                    </a>
+                                    <p class="gia-tour">
+                                        97,900,000 <u>đ</u>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- faculity -->
+        <section class="faculity">
+            <div class="faculity-title">
+                <h1>LÝ DO CHỌN MONA TRAVEL</h1>
+            </div>
+
+            <div class="faculity-icon">
+                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach.png" alt="" width="60" height="10">
+            </div>
+
+            <div class="faculity-item">
+                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/hotel.png" alt="" class="faculity-item-image">
+                <h3 class="faculity-item-title">Khách sạn tốt nhất</h3>
+                <p class="faculity-item-desc">
+                    Để mọi người mọi nhà đều có thể đi du lịch với giá cả hợp lý nhất.
+                </p>
+            </div>
+
+            <div class="faculity-item">
+                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/customer-service.png" alt="" class="faculity-item-image">
+                <h3 class="faculity-item-title">Hỗ trợ 24/7</h3>
+                <p class="faculity-item-desc">
+                    Để mọi người mọi nhà đều có thể đi du lịch với giá cả hợp lý nhất.
+                </p>
+            </div>
+
+            <div class="faculity-item">
+                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/best-price.png" alt="" class="faculity-item-image">
+                <h3 class="faculity-item-title">Giá luôn tốt nhất</h3>
+                <p class="faculity-item-desc">
+                    Để mọi người mọi nhà đều có thể đi du lịch với giá cả hợp lý nhất.
+                </p>
+            </div>
+        </section>
+
+        <!-- thanh tuu -->
+        <section class="thanh-tuu">
+            <div class="mask">
+                <div class="thanh-tuu-container">
+                    <div class="thanh-tuu-item-title">
+                        <p class="thanh-tuu-desc">
+                            PHỤNG SỰ KHÁCH HÀNG 8 NĂM
+                        </p>
+                        <h1 class="thanh-tuu-title">
+                            THÀNH QUẢ CỦA MONA TRAVEL
+                        </h1>
+                        <div class="thanh-tuu-item-icon">
+                            <img width="60" height="10" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach2.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="thanh-tuu-item-chung">
+                        <div class="thanh-tuu-item-ket-qua thanh-tuu-item-ket-qua1">
+                            <div class="thanh-tuu-item-ket-qua-icon">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/airplane-around-earth.png" width="80" height="30" alt="">
+                            </div>
+                            <h1 class="thanh-tuu-item-ket-qua-so-lieu">
+                                <span>20,549+</span>
+                            </h1>
+                            <p class="thanh-tuu-item-ket-qua-thong-tin">
+                                Tour hoàn thành
+                            </p>
+                        </div>
+    
+                        <div class="thanh-tuu-item-ket-qua thanh-tuu-item-ket-qua1">
+                            <div class="thanh-tuu-item-ket-qua-icon">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/guest.png" alt=""  width="80" height="30">
+                            </div>
+                            <h1 class="thanh-tuu-item-ket-qua-so-lieu">
+                                <span>60,419+</span>
+                            </h1>
+                            <p class="thanh-tuu-item-ket-qua-thong-tin">
+                                Khách hàng
+                            </p>
+                        </div>
+    
+                        <div class="thanh-tuu-item-ket-qua thanh-tuu-item-ket-qua2">
+                            <div class="thanh-tuu-item-ket-qua-icon">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/world.png" width="80" height="30" alt="">
+                            </div>
+                            <h1 class="thanh-tuu-item-ket-qua-so-lieu">
+                                <span>5,000+</span>
+                            </h1>
+                            <p class="thanh-tuu-item-ket-qua-thong-tin">
+                                Điểm tham quan
+                            </p>
+                        </div>
+    
+                        <div class="thanh-tuu-item-ket-qua thanh-tuu-item-ket-qua2">
+                            <div class="thanh-tuu-item-ket-qua-icon">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/truck.png" alt=""  width="80" height="30">
+                            </div>
+                            <h1 class="thanh-tuu-item-ket-qua-so-lieu">
+                                <span>856+</span>
+                            </h1>
+                            <p class="thanh-tuu-item-ket-qua-thong-tin">
+                                Phương tiện
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- tour noi dia -->
+        <section id="tourNoiDia" class="tour-noi-dia">
+            <div class="tour-noi-dia-container">
+                <div class="tour-noi-dia-thong-tin">
+                    <div class="tour-noi-dia-item-desc">
+                        Chọn ngay cho bạn tour phù hợp
+                    </div>
+                    <h1 class="tour-noi-dia-item-title">
+                        TOUR NỘI ĐỊA
+                    </h1>
+                    <div class="tour-noi-dia-icon">
+                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach.png" alt="" width="60" height="10">
+                    </div>
+                </div>
+                
+                <div class="tour-noi-dia-item">
+                    <div class="tour-noi-dia-image">
+                        <a href="du-lich-trong nuoc.html" class="tour-noi-dia-background">
+                            <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/coco2.jpg" alt="">
+                            <div class="tour-noi-dia-information">
+                                <p class="tour-noi-dia-desc">
+                                    DU LỊCH CÔN ĐẢO
+                                </p>
+                                <a href="" class="tour-noi-dia-title">
+                                    DU LỊCH CÔN ĐẢO 2 NGÀY 1 ĐÊM BAY TỪ SG
+                                </a>
+                                <p class="gia-tour-noi-dia">
+                                    5,299,000 <u>đ</u>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tour-noi-dia-image">
+                        <a href="du-lich-trong nuoc.html" class="tour-noi-dia-background">
+                            <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/lang-hoa.jpg" alt="">
+                            <div class="tour-noi-dia-information">
+                                <p class="tour-noi-dia-desc">
+                                    DU LỊCH MIỀN BẮC
+                                </p>
+                                <a href="" class="tour-noi-dia-title">
+                                    DU LỊCH MIỀN BẮC - SAPA - FANSIPAN 5 NGÀY
+                                </a>
+                                <p class="gia-tour-noi-dia">
+                                    10,999,000 <u>đ</u>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tour-noi-dia-image">
+                        <a href="du-lich-trong nuoc.html" class="tour-noi-dia-background">
+                            <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/1057_deo_hai_van.jpg" alt="">
+                            <div class="tour-noi-dia-information">
+                                <p class="tour-noi-dia-desc">
+                                    DU LỊCH MIỀN NAM
+                                </p>
+                                <a href="" class="tour-noi-dia-title">
+                                    DU LỊCH PHÚ QUỐC - NAM ĐẢO 3 NGÀY 2 ĐÊM
+                                </a>
+                                <p class="gia-tour-noi-dia">
+                                    <del class="gia-tour-noi-dia-1">4,999,000 <u>đ</u></del> 4,099,000 <u>đ</u>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- dem nguoc thoi gian -->
+        <section class="giam-gia">
+            <div class="mask">
+                <div class="container">
+                    <div class="giam-gia-title">
+                        <h1 class="giam-gia-item">
+                            Ưu đãi đặc biệt cho 50 khách hàng đầu tiên
+                            <br>
+                            đặt Tour nước ngoài <span>Giảm ngay 40%</span>
+                        </h1>
+                        <div class="giam-gia-icon">
+                            <img width="60" height="10" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach2.png" alt="">
+                        </div>
+                        <p class="giam-gia-mo-ta">
+                            Thời gian chỉ còn lại
+                        </p>
+                    </div>
+        
+                    <div class="giam-gia-item-background">
+                        <div class="giam-gia-background">
+                            <h1 class="so-gio">0</h1>
+                            <strong>GIỜ</strong>
+                        </div>
+
+                        <div class="giam-gia-background">
+                            <h1 class="so-gio">0</h1>
+                            <strong>PHÚT</strong>
+                        </div>
+
+                        <div class="giam-gia-background">
+                            <h1 class="so-gio">0</h1>
+                            <strong>GIÂY</strong>
+                        </div>
+                    </div>
+                        
+                    <button class="btn btn-primary">
+                        <a href="du-lich-trong nuoc.html" class="dat-hang-icon">
+                            <i class="fas fa-shopping-cart fa-1x"></i> <b> ĐẶT NGAY</b>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- cam nang du lich -->
+        <section id="tinTuc" class="cam-nang-du-lich">
+            <div class="khoi-chung">
+                <div class="khoi-thu-nhat">
+                    <div class="nhan-xet">
+                        <h2 class="nhan-xet-title">
+                            NHẬN XÉT
+                        </h2>
+                        <div class="nhan-xet-icon">
+                            <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach.png" alt="" width="60" height="10">
+                        </div>
+                    </div>
+    
+                    <div class="cam-nang-du-lich-item-review-1">
+                        <div class="customer-review-avatar">
+                            <img src="https://i.pinimg.com/originals/c2/9a/7d/c29a7d29348b1a3f502803ab9d8355cc.png" alt="">
+                        </div>
+                        <div class="icon-review">
+                            <i class="fas fa-star fa-0.5x"></i><i class="fas fa-star fa-0.5x"></i><i class="fas fa-star fa-0.5x"></i><i class="fas fa-star fa-0.5x"></i><i class="fas fa-star fa-0.5x"></i>
+                        </div>
+                        <h4 class="name-customer">
+                            Sơn Tùng M-TP
+                        </h4>
+                        <p class="customer-review-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore incidunt, corporis tenetur exercitationem cupiditate veniam magni ipsam, quia dolores optio alias vitae perferendis, similique modi.
+                        </p>
+                        <p class="country-customer">
+                            - Tour Singapore -
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="khoi-thu-hai">
+                    <div class="cam-nang-du-lich-title-1">
+                        <h2 class="cam-nang-du-lich-desc-1">
+                            CẨM NANG DU LỊCH TỪ A – Z
+                        </h2>
+                        <div class="cam-nang-du-lich-icon">
+                            <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach.png" alt="" width="60" height="10">
+                        </div>
+                    </div>
+    
+                    <div class="cam-nang-du-lich-item-review">
+                        <div class="cam-nang-du-lich-image">
+                            <a href="tin-tuc.html" class="cam-nang-du-lich-background">
+                                <img class="anh-nen" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/201H-370x260.jpg" alt="">
+                                <div class="cam-nang-du-lich-desc">
+                                    <h5 class="cam-nang-du-lich-title">
+                                        TẤT TẦN TẬT NHỮNG KINH NGHIỆM BẠN CẦN BIẾT TRƯỚC KHI DU LỊCH BÌNH BA
+                                    </h5>
+                                    <div class="thong-tin">
+                                        <div class="ngay-thang">
+                                            7 Tháng Mười Hai, 2018
+                                        </div>
+                                        <div class="gioi-thieu">
+                                            <p class="gioi-thieu-ve-cam-nang">
+                                                Giới thiệu sơ lược về <span>đảo </span> Bình Ba Bình Ba là một đảo nhỏ, diện [...]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="cam-nang-du-lich-item-review">
+                        <div class="cam-nang-du-lich-image">
+                            <a href="tin-tuc.html" class="cam-nang-du-lich-background">
+                                <img class="anh-nen" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/86H-370x260.jpg" alt="">
+                                <div class="cam-nang-du-lich-desc">
+                                    <h5 class="cam-nang-du-lich-title">
+                                        VÌ SAO BẠN PHẢI ĐẾN ĐÀI LOAN MỘT LẦN TRONG ĐỜI?
+                                    </h5>
+                                    <div class="thong-tin">
+                                        <div class="ngay-thang">
+                                            7 Tháng Mười Hai, 2018
+                                        </div>
+                                        <div class="gioi-thieu">
+                                            <p class="gioi-thieu-ve-cam-nang">
+                                                Khung cảnh tuyệt <span>đẹp: </span> Đài loan được bao phủ bởi màu xanh của cây cối và [...]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- thong tin lien he -->
+        <section id="lienHe" class="thong-tin-web">
+            <div class="container">
+                <div class="thong-tin-title">
+                    <div class="icon-web">
+                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/logo-while.png" alt="" width="180" height="180">
+                    </div>
+                    
+                    <div class="dia-chi">
+                        <div class="icon">
+                            <i id="khoang-cach" class="fas fa-map-marker fa-1x"></i> 319 - C16 Lý Thường Kiệt, Q.11,
+                            <br>
+                            HCM
+                        </div>
+                    </div>
+
+                    <div class="dien-thoai-lien-he">
+                        <i id="khoang-cach" class="fas fa-phone-alt"></i> <a href="Lien-he.html" class="dien-thoai-btn">0126 922 0162</a>
+                    </div>
+
+                    <div class="email">
+                        <i id="khoang-cach" class="fas fa-envelope"></i> <a href="Lien-he.html" class="email-btn">demonhunter@gmail.com</a>
+                    </div>
+
+                    <div class="icon-lien-he">
+                        <a href="Lien-he.html" class="icon-mang-xa-hoi">
+                            <i id="icon-item" class="fab fa-facebook-f fa-1x"></i>
+                            <i id="icon-item" class="fab fa-instagram fa-1x"></i>
+                            <i id="icon-item" class="fab fa-google-plus-g fa-1x"></i>
+                            <i id="icon-item" class="fab fa-youtube fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="thong-tin-title">
+                    <ul class="danh-muc-tin-tuc">
+                        <h3>Tin Tức</h3>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Bản tin Du Lịch Việt</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Khám phá du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Kinh nghiệm du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Sự kiện du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Tuyển dụng Du Lịch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="thong-tin-title">
+                    <ul class="danh-muc-tin-tuc">
+                        <h3>Menu</h3>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Giới thiệu</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Du lịch trong nước</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Du lịch nước ngoài</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Tin tức</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="thong-tin-title-1" class="thong-tin-title">
+                    <h3 class="title">Tour Phổ Biến</h3>
+                    <div class="mot-vai-tour-pho-bien">
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-nhat">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/coco2-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-hai">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/1057_deo_hai_van-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-ba">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/travlec-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-tu">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/bana5-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-nam">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/lang-hoa-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-sau">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/hue-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mo-ta">
+                <p>
+                    © All rights reserved.
+                    <br>
+                    Thiết kế website
+                    <img src="http://mona-media.com/logo.png" alt="" width="20" height="20">
+                    <a class="mo-ta-btn" href="index.html">
+                        Mona Media
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section class="form-dang-ki">
+            <div class="mask">
+                <div class="form-dang-ki-desc">
+                <p>Luôn là những người có thông tin sớm nhất</p>
+            </div>
+            <div class="form-dang-ki-title">
+                <h1>ĐĂNG KÍ ĐỂ NHẬN ƯU ĐÃI</h1>
+            </div>
+            <div class="form-dang-ki-icon">
+                <img width="70" height="20" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach2.png" alt="">
+            </div>
+            <input type="email" class="email" placeholder="Email của bạn">
+            <button class="btn-dang-ki"><a href="">Gửi</a></button>
+            </div>
+        </section>
+
+        <script>
+            new Splide( '.splide' ).mount();
+        </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin-tuc</title>
+    <script src="https://kit.fontawesome.com/3a6163f80a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            font-size: 100%;
+            line-height: 1.6;
+            color: #353535;
+        }
+        .nav-bar{
+            max-width: 1120px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+        }
+
+        /* logo */
+        .nav-bar .logo{
+            float: left;
+            padding: 35px 0 0 10px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-style: none;
+            max-height: 110px;
+            opacity: 1;
+        }
+        .logo a{
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        .logo{
+            line-height: 1;
+        }
+
+        /* menu */
+        .header-menu{
+            background-color: white;
+        }
+        .nav-bar .menu-cap-1{
+            float: right;
+            position: relative;
+            padding: 20px 0;
+        }
+        .nav-bar .menu-cap-1 a{
+            color: #7D7D7D;
+            font-size: 14px;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1{
+            display: inline-block;
+            font-size: 13px;
+            line-height: 17px;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1 a{
+            line-height: 16px;
+            border-bottom: 3px solid #ffffff;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1:hover .title-item-menu-cap-1{
+            border-bottom: 3px solid #FFB300;
+            transition-duration: 0.2s;
+            color: #000000;
+        }
+        .nav-bar .title-item-menu-cap-2:hover{
+            background-color: rgb(238, 235, 235);
+            transition-duration: 0.4s;
+        }
+        .nav-bar .item-menu-cap-3:hover .title-item-menu-cap-3{
+            background-color: rgb(238, 235, 235);
+            color: #000000;
+            transition-duration: 0.4s;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1 .title-item-menu-cap-1{
+            display: inline-block;
+            padding: 10px 10px;
+            margin-top: 10px;
+        }
+        .nav-bar .menu-cap-1 .item-menu-cap-1:hover .menu-cap-2{
+            display: flex;
+            visibility: visible;
+        }
+        .nav-bar .menu-cap-2{
+            position: absolute;
+            visibility: hidden;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 5px;
+            padding: 25px 20px;
+            height: auto;
+            max-width: 100%;
+            padding-left: -20px;
+        }
+        .nav-bar .menu-cap-2 a{
+            color: black;
+        }
+        .nav-bar .menu-cap-2 .item-menu-cap-2{
+            display: flex;
+            flex-direction: column;
+            min-width: 160px;
+            text-align: left;
+        }
+        .nav-bar .menu-cap-2 .title-item-menu-cap-2{
+            font-size: 13px;
+            padding: 10px 10px;
+        }
+        .nav-bar .menu-cap-2 .title-item-menu-cap-3{
+            font-size: 16px;
+            color: #7D7D7D;
+            padding: 10px 10px;
+        }
+        .nav-bar .item-menu-cap-3{
+            padding: 10px 0px;
+        }
+        .hot:after{
+            background: #ffb300;
+            content: "Hot";
+            display: inline-block;
+            font-size: 9px;
+            line-height: 9px;
+            text-transform: uppercase;
+            margin-left: 4px;
+            font-weight: bold;
+            border-radius: 2px;
+            color: #fff;
+            padding: 2px 3px 3px 3px;
+            position: relative;
+            top: -4px;
+        }
+
+        .header-menu .nav-bar #title-item-menu-cap-1-2{
+            border-right: 1px solid #bdb7b7;
+            max-height: 33px;
+            padding-right: 20px;
+        }
+
+        .nav-bar #icon-search{
+            background: #ffb300;
+            margin-left: 20px;
+            padding: 8px;
+            font-size: 18px;
+            border-radius: 5px;
+            color: white;
+        }
+        .nav-bar #icon-search:hover{
+            background-color: #c9900c;
+            transition-duration: 0.5s;
+        }
+
+        /* Tin Tuc */
+        .tin-tuc-content{
+            height: 1080px;
+            width: 100%;
+        }
+        .tin-tuc-content .tin-tuc-title{
+            background: url(https://msmobile.com.vn/upload_images/images/hinh-nen-4k-cho-laptop-1-1.jpeg) no-repeat center center/cover;
+            height: 130px;
+            margin-top: -10px;
+            overflow: auto;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .tin-tuc-content .title-tin-tuc{
+            padding-top: 50px;
+            font-size: 22px;
+        }
+        .tin-tuc-content .mask{
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+        }
+        .tin-tuc-content .khoi-chung-tin-tuc{
+            margin-top: 40px;
+        }
+        /* khoi thu nhat */
+        .tin-tuc-content .tin-tuc-content-item{
+            width: 70%;
+            float: left;
+            padding-left: 10%;
+            padding-right: -30px;
+        }
+        .tin-tuc-content .tin-tuc-item{
+            display: inline-block;
+            width: 27%;
+            margin: 15px 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 7px 5px 0px rgb(50 50 50 / 8%);
+            height: auto;
+        }
+        .tin-tuc-content .anh-nen-1{
+            width: 100%;
+            min-height: 150px;
+        }
+        .tin-tuc-content .ngay-thang{
+            padding: 5px 0 10px 0;
+            font-size: 14px;
+            font-weight: 300;
+            padding-left: 8px;
+            color: #1a1919;
+        }
+        .tin-tuc-content .cam-nang-du-lich-title{
+            font-size: 17px;
+            line-height: 22px;
+            color: #1a1919;
+            padding-left: 8px;
+        }
+        .tin-tuc-content .gioi-thieu-tin-tuc{
+            padding-top: 18px;
+            padding-left: 8px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 23px;
+            color: #1a1919;
+            margin-bottom: 20px;
+        }
+        .tin-tuc-content .tin-tuc-item:hover .ngay-thang{
+            color: #f5af0b;
+            transition-duration: 0.2s;
+        }
+
+        .tin-tuc-content .tin-tuc-item:hover .gioi-thieu-tin-tuc{
+            color: #1fa2d6;
+            transition-duration: 0.2s;
+        }
+        .tin-tuc-content .tin-tuc-item:hover{
+            box-shadow: 0px 7px 16px 0px rgb(50 50 50 / 20%);
+            transition-duration: 0.2s;
+        }
+
+        /* khoi thu hai */
+        .tin-tuc-content .tin-tuc-content-item1{
+            width: 30%;
+            float: right;
+            padding-right: 10%;
+            height: 500px;
+        }
+        .tin-tuc-content input{
+            padding: 10px 10px;
+            width: 60%;
+        }
+        .tin-tuc-content input:focus{
+            border: 1px solid #ddd;
+            outline: none;
+            box-shadow: 0px 7px 16px 0px rgb(50 50 50 / 10%);
+        }
+        .tin-tuc-content .btn2{
+            padding: 7px 10px 12px 10px;
+            width: 14%;
+            margin-left: -10px;
+            margin-top: 15px;
+        }
+        .tin-tuc-content .btn2-primary2{
+            background-color: #26BDF7;
+            color: white;
+            border: 0;
+        }
+        .tin-tuc-content .btn2-primary2:focus{
+            border: 1px solid #26BDF7;
+            outline: none;
+        }
+        .tin-tuc-content .btn2-primary2:hover{
+            background-color: #1696c9;
+        }
+        .tin-tuc-content .fa-search{
+            font-size: 20px;
+        }
+        .tin-tuc-content .bai-viet-moi-nhat{
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        .tin-tuc-content .hinh-dai-dien{
+            width: 15%;
+            float: left;
+            display: block;
+            margin-right: 15px;
+        }
+        .tin-tuc-content .bai-viet-moi-nhat-item{
+            display: block;
+            width: 95%;
+            padding: 20px 0;
+        }
+        .tin-tuc-content .bai-viet-moi-nhat-item1{
+            border-bottom: 1px solid #ddd;
+        }
+        .tin-tuc-content .tin-tuc-noi-dung{
+            font-size: 17px;
+            color: #1a1919;
+            margin-top: -5px;
+            font-weight: 330;
+            line-height: 20px;
+        }
+        .tin-tuc-content .tin-tuc-noi-dung:hover{
+            color: #1fa2d6;
+            transition-duration: 0.2s;
+        }
+
+        /* thong tin lien he */
+        .thong-tin-web{
+            background: url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/02/bg-section-videos.jpg) no-repeat center center/cover;
+            color: #A5A5A5;
+        }
+        .thong-tin-web a{
+            color: #A5A5A5;
+        }
+        .thong-tin-web .container{
+            /* padding-top: 50px; */
+            text-align: center;
+        }
+        .thong-tin-web .thong-tin-title{
+            display: inline-block;
+            width: 17%;
+            text-align: left;
+            padding-top: 50px;
+        }
+        .thong-tin-web .tour-pho-bien-item{
+            display: inline-block;
+        }
+        /* lien he */
+        .thong-tin-web .dia-chi{
+            padding-top: 20px;
+        }
+        .thong-tin-web .email{
+            padding-top: 10px;
+        }
+        .thong-tin-web .icon-lien-he{
+            padding-top: 30px;
+        }
+        .thong-tin-web #icon-item{
+            padding: 0 5px;
+        }
+        .thong-tin-web .danh-muc-tin-tuc-item{
+            padding-top: 20px;
+            font-size: 13px;
+            font-weight: 200;
+        }
+        .thong-tin-web .dien-thoai-btn:hover{
+            color: white;
+        }
+        .thong-tin-web .email-btn:hover{
+            color: white;
+        }
+        .thong-tin-web #icon-item:hover{
+            color: white;
+            transition-duration: 0.5s;
+        }
+        .thong-tin-web #khoang-cach{
+            padding-right: 10px;
+        }
+        /* tour pho bien */
+        .thong-tin-web .mot-vai-tour-pho-bien{
+            padding-top: 30px;
+        }
+        .thong-tin-web .tour-pho-bien-item img{
+            float: left;
+        }
+        /* footer */
+        .thong-tin-web .mo-ta{
+            margin: auto;
+            text-align: center;
+            border-top: solid;
+            max-width: 1150px;
+            margin-top: 50px;
+            font-weight: 350;
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+        .thong-tin-web .mo-ta-btn:hover{
+            color: white;
+        }
+
+        /* form dang ki */
+        .form-dang-ki{
+            background: url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/02/hotel-result.jpg) no-repeat center center/cover;
+            height: 350px;
+            text-align: center;
+            color: white;
+        }
+        .form-dang-ki .mask{
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .form-dang-ki .form-dang-ki-desc{
+            padding-top: 60px;
+            font-weight: 400;
+        }
+        .form-dang-ki .form-dang-ki-title{
+            padding-top: 20px;
+            font-size: 18px;
+        }
+        .form-dang-ki .email{
+            margin-top: 50px;
+            padding: 10px 10px;
+            padding-right: 200px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .form-dang-ki .btn-dang-ki{
+            padding: 10px 10px 12px 10px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: #FFB300;
+            border: 0;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: -5px;
+        }
+        .form-dang-ki .btn-dang-ki a{
+            color: white;
+        }
+        .form-dang-ki .btn-dang-ki:hover{
+            background-color: #966d0e;
+            transition-duration: 1s;
+        }
+        .form-dang-ki .btn-dang-ki:focus{
+            border: 0;
+            color: #FFB300;
+        }
+        .form-dang-ki .email:focus{
+            border: 1px solid white;
+            box-shadow:  1px 1px 3px 0 white;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-menu">
+        <nav id="nav-bar" class="nav-bar">
+            <div class="logo">
+                <a href="index.html"><img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/mona-logo2.png" width="120" height="90" alt=""></a>
+            </div>
+    
+            <div class="menu-cap-1">
+                <ul>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="Gioi-thieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="du-lich-trong nuoc.html">TOUR NỘI ĐỊA <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-cap-2">
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN BẮC</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Hà Nội</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Sa Pa</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Hạ Long</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN TRUNG</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Đà Nẵng</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Phú Yên</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-2">DU LỊCH MIỀN NAM</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Côn Đảo</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-trong nuoc.html" class="title-item-menu-cap-3">Du lịch Phú Quốc</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1 hot" href="du-lich-nuoc-ngoai.html">TOUR NƯỚC NGOÀI <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-cap-2">
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU Á</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Hàn Quốc</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Nhật Bản</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU ÂU</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Anh</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Nga</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-menu-cap-2">
+                                <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-2">DU LỊCH CHÂU MỸ</a>
+                                <ul class="menu-cap-3">
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Canada</a>
+                                    </li>
+                                    <li class="item-menu-cap-3">
+                                        <a href="du-lich-nuoc-ngoai.html" class="title-item-menu-cap-3">Du lịch Mỹ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a class="title-item-menu-cap-1" href="tin-tuc.html">TIN TỨC</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a id="title-item-menu-cap-1-2" class="title-item-menu-cap-1" href="Lien-he.html">LIÊN HỆ</a>
+                    </li>
+                    <li class="item-menu-cap-1">
+                        <a href=""><i id="icon-search" class="fas fa-search"></i></a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tin-tuc-content">
+            <div class="tin-tuc-title">
+                <div class="mask">
+                    <h3 class="title-tin-tuc">TIN TỨC</h3>
+                </div>
+            </div>
+
+            <div class="khoi-chung-tin-tuc">
+                <div class="tin-tuc-content-item">
+                    <div class="tin-tuc-item">
+                        <a href="index.html" class="tin-tuc-du-lich-background">
+                            <img class="anh-nen-1" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/201H-370x260.jpg" alt="">
+                            <div class="ngay-thang">
+                                <p>7 Tháng Mười Hai</p>
+                            </div>
+                            <div class="tin-tuc-du-lich-title">
+                                <h5 class="cam-nang-du-lich-title">
+                                    Tất tần tật những kinh nghiệm bạn cần biết trước khi du lịch Bình Ba
+                                </h5>
+                                <p class="gioi-thieu-tin-tuc">
+                                    Giới thiệu sơ lược về đảo Bình Ba Bình Ba là một đảo nhỏ, diện [...]
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="tin-tuc-item">
+                        <a href="index.html" class="tin-tuc-du-lich-background">
+                            <img class="anh-nen-1" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/86H-370x260.jpg" alt="">
+                            <div class="ngay-thang">
+                                <p>7 Tháng Mười Hai</p>
+                            </div>
+                            <div class="tin-tuc-du-lich-title">
+                                <h5 class="cam-nang-du-lich-title">
+                                    Vì sao bạn phải đến Đài Loan một lần trong đời?
+                                </h5>
+                                <p class="gioi-thieu-tin-tuc">
+                                    Khung cảnh tuyệt đẹp: Đài loan được bao phủ bởi màu xanh của cây cối và rừng nhiệt đới [...]
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="tin-tuc-item">
+                        <a href="index.html" class="tin-tuc-du-lich-background">
+                            <img class="anh-nen-1" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-8-600x450.jpg" alt="">
+                            <div class="ngay-thang">
+                                <p>7 Tháng Mười Hai</p>
+                            </div>
+                            <div class="tin-tuc-du-lich-title">
+                                <h5 class="cam-nang-du-lich-title">
+                                    Du lịch Nha Trang: 10 điểm du lịch tham quan hấp dẫn nhất
+                                </h5>
+                                <p class="gioi-thieu-tin-tuc">
+                                    1. Vinpearl Land Tọa lạc trên đảo Hòn Tre với những bãi biển trong xanh quanh năm, [...]
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="tin-tuc-item">
+                        <a href="index.html" class="tin-tuc-du-lich-background">
+                            <img class="anh-nen-1" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-9-600x450.jpg" alt="">
+                            <div class="ngay-thang">
+                                <p>6 Tháng Mười Hai</p>
+                            </div>
+                            <div class="tin-tuc-du-lich-title">
+                                <h5 class="cam-nang-du-lich-title">
+                                    Du lịch Phú Quốc: Cẩm nang từ A đến Z
+                                </h5>
+                                <p class="gioi-thieu-tin-tuc">
+                                    Tổng quan du lịch Phú Quốc Một góc Phú Quốc (Ảnh: khoangkhacvietnam) Phú Quốc là quần [...]
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tin-tuc-item">
+                        <a href="index.html" class="tin-tuc-du-lich-background">
+                            <img class="anh-nen-1" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-6-600x450.jpg" alt="">
+                            <div class="ngay-thang">
+                                <p>6 Tháng Mười Hai</p>
+                            </div>
+                            <div class="tin-tuc-du-lich-title">
+                                <h5 class="cam-nang-du-lich-title">
+                                    Du lịch Vũng Tàu: Cẩm nang từ A đến Z
+                                </h5>
+                                <p class="gioi-thieu-tin-tuc">
+                                    Tổng quan du lịch Vũng Tàu Cách trung tâm thành phố Hồ Chí Minh chỉ khoảng 3 tiếng lái xe, [...]
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tin-tuc-item">
+                        <a href="index.html" class="tin-tuc-du-lich-background">
+                            <img class="anh-nen-1" src="https://cdnmedia.baotintuc.vn/2017/05/22/16/33/dulichhe.jpg" alt="">
+                            <div class="ngay-thang">
+                                <p>6 Tháng Mười Hai</p>
+                            </div>
+                            <div class="tin-tuc-du-lich-title">
+                                <h5 class="cam-nang-du-lich-title">
+                                    Du lịch Nhật Bản: Cẩm nang từ A đến Z
+                                </h5>
+                                <p class="gioi-thieu-tin-tuc">
+                                    Tổng quan du lịch Núi Phú Sĩ Cách trung tâm thành phố ToKyo chỉ khoảng 3 tiếng lái xe, [...]
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+    
+                <div class="tin-tuc-content-item1">
+                    <div class="tin-tuc-tim-kiem">
+                        <input type="text" class="tim-kiem" placeholder="Tìm kiếm...">
+                        <button class="btn2 btn2-primary2"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="bai-viet-moi-nhat">
+                        <h4><span>BÀI</span> VIẾT MỚI NHẤT</h4>
+                    </div>
+                    <div class="bai-viet-moi-nhat-item bai-viet-moi-nhat-item1">
+                        <a href="index.html" class="item-1-content">
+                            <div class="hinh-dai-dien">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/201H-370x260-150x150.jpg" alt="">
+                            </div>
+                            <div class="tin-tuc-noi-dung">
+                                <p>Tất tần tật những kinh nghiệm bạn cần biết trước khi du lịch Bình Ba</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="bai-viet-moi-nhat-item bai-viet-moi-nhat-item1">
+                        <a href="index.html" class="item-1-content">
+                            <div class="hinh-dai-dien">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/86H-370x260-150x150.jpg" alt="">
+                            </div>
+                            <div class="tin-tuc-noi-dung">
+                                <p>Vì sao bạn phải đến Đài Loan một lần trong đời?</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="bai-viet-moi-nhat-item bai-viet-moi-nhat-item1">
+                        <a href="index.html" class="item-1-content">
+                            <div class="hinh-dai-dien">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-8-150x150.jpg" alt="">
+                            </div>
+                            <div class="tin-tuc-noi-dung">
+                                <p>Du lịch Nha Trang: 10 điểm du lịch tham quan hấp dẫn nhất</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="bai-viet-moi-nhat-item bai-viet-moi-nhat-item1">
+                        <a href="index.html" class="item-1-content">
+                            <div class="hinh-dai-dien">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-6-150x150.jpg" alt="">
+                            </div>
+                            <div class="tin-tuc-noi-dung">
+                                <p>Du lịch Vũng Tàu: Cẩm nang từ A đến Z</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="bai-viet-moi-nhat-item">
+                        <a href="index.html" class="item-1-content">
+                            <div class="hinh-dai-dien">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-9-150x150.jpg" alt="">
+                            </div>
+                            <div class="tin-tuc-noi-dung">
+                                <p>Du lịch Phú Quốc: Cẩm nang từ A đến Z</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- thong tin lien he -->
+        <section id="lienHe" class="thong-tin-web">
+            <div class="container">
+                <div class="thong-tin-title">
+                    <div class="icon-web">
+                        <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/logo-while.png" alt="" width="180" height="180">
+                    </div>
+                    
+                    <div class="dia-chi">
+                        <div class="icon">
+                            <i id="khoang-cach" class="fas fa-map-marker fa-1x"></i> 319 - C16 Lý Thường Kiệt, Q.11,
+                            <br>
+                            HCM
+                        </div>
+                    </div>
+
+                    <div class="dien-thoai-lien-he">
+                        <i id="khoang-cach" class="fas fa-phone-alt"></i> <a href="Lien-he.html" class="dien-thoai-btn">0126 922 0162</a>
+                    </div>
+
+                    <div class="email">
+                        <i id="khoang-cach" class="fas fa-envelope"></i> <a href="Lien-he.html" class="email-btn">demonhunter@gmail.com</a>
+                    </div>
+
+                    <div class="icon-lien-he">
+                        <a href="Lien-he.html" class="icon-mang-xa-hoi">
+                            <i id="icon-item" class="fab fa-facebook-f fa-1x"></i>
+                            <i id="icon-item" class="fab fa-instagram fa-1x"></i>
+                            <i id="icon-item" class="fab fa-google-plus-g fa-1x"></i>
+                            <i id="icon-item" class="fab fa-youtube fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="thong-tin-title">
+                    <ul class="danh-muc-tin-tuc">
+                        <h3>Tin Tức</h3>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Bản tin Du Lịch Việt</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Khám phá du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Kinh nghiệm du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Sự kiện du lịch</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="tin-tuc.html" class="">Tuyển dụng Du Lịch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="thong-tin-title">
+                    <ul class="danh-muc-tin-tuc">
+                        <h3>Menu</h3>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Giới thiệu</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Du lịch trong nước</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Du lịch nước ngoài</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Tin tức</a>
+                        </li>
+                        <li class="danh-muc-tin-tuc-item">
+                            <a href="Gioi-thieu.html" class="">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="thong-tin-title-1" class="thong-tin-title">
+                    <h3 class="title">Tour Phổ Biến</h3>
+                    <div class="mot-vai-tour-pho-bien">
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-nhat">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/coco2-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-hai">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/1057_deo_hai_van-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div id="tour-1" class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-ba">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/travlec-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-tu">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/bana5-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-nam">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/lang-hoa-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                        <div class="tour-pho-bien-item">
+                            <a href="du-lich-trong nuoc.html" class="image-tour-thu-sau">
+                                <img src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2017/12/hue-300x300.jpg" alt="" width="80" height="80">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mo-ta">
+                <p>
+                    © All rights reserved.
+                    <br>
+                    Thiết kế website
+                    <img src="http://mona-media.com/logo.png" alt="" width="20" height="20">
+                    <a class="mo-ta-btn" href="index.html">
+                        Mona Media
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section class="form-dang-ki">
+            <div class="mask">
+                <div class="form-dang-ki-desc">
+                <p>Luôn là những người có thông tin sớm nhất</p>
+            </div>
+            <div class="form-dang-ki-title">
+                <h1>ĐĂNG KÍ ĐỂ NHẬN ƯU ĐÃI</h1>
+            </div>
+            <div class="form-dang-ki-icon">
+                <img width="70" height="20" src="http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/gach2.png" alt="">
+            </div>
+            <input type="email" class="email" placeholder="Email của bạn">
+            <button class="btn-dang-ki"><a href="">Gửi</a></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
